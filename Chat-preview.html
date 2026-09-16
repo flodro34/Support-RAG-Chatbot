@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Aperçu du widget "Chat"</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1.5rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at 20% 15%, #2b2470 0%, transparent 45%),
+                radial-gradient(circle at 85% 80%, #123d38 0%, transparent 50%),
+                linear-gradient(160deg, #0e0f14 0%, #16171d 45%, #1a1730 100%);
+    background-attachment: fixed;
+  }
+
+  .stage {
+    width: 400px;
+    max-width: 100%;
+  }
+
+  .stage-label {
+    color: #f7f6f3;
+    font-size: 01 rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin: 0 0 0.9rem 0.25rem;
+    opacity: 0.85;
+  }
+
+  .chat-card {
+    background: #f7f6f3;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.06);
+    overflow: hidden;
+    box-shadow:
+      0 1px 2px rgba(0,0,0,0.2),
+      0 20px 48px rgba(0,0,0,0.45),
+      0 8px 24px rgba(80,70,228,0.18);
+  }
+
+  .chat-header {
+    background: #16171d;
+    color: #f7f6f3;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .chat-header h1 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 0.35rem 0;
+  }
+
+  .chat-header p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin: 0;
+    color: #b9b8c4;
+  }
+
+  .chat-body {
+    background: #f7f6f3;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    min-height: 260px;
+  }
+
+  .msg {
+    max-width: 80%;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .msg-bot {
+    align-self: flex-start;
+    background: #ffffff;
+    color: #16171d;
+    border: 1px solid #d8d5cc;
+    border-radius: 4px 14px 14px 14px;
+  }
+
+  .msg-user {
+    align-self: flex-end;
+    background: #1f6f64;
+    color: #ffffff;
+    border-radius: 14px 14px 4px 14px;
+  }
+
+  .chat-input {
+    background: #ffffff;
+    border-top: 1px solid #d8d5cc;
+    padding: 0.85rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .chat-input .field {
+    flex: 1;
+    color: #8a8d94;
+    font-size: 0.95rem;
+  }
+
+  .chat-input .send {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: transparent;
+    color: #5046e4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+
+  .toggle-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.25rem;
+  }
+
+  .toggle {
+    width: 60px;
+    height: 60px;
+    border-radius: 22px;
+    background: #1f6f64;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow:
+      0 4px 10px rgba(80,70,228,0.4),
+      0 2px 4px rgba(0,0,0,0.25);
+  }
+</style>
+</head>
+<body>
+
+  <div class="stage">
+    <p class="stage-label">Aperçu du widget "Chat Bot"</p>
+    <div class="chat-card">
+      <div class="chat-header">
+        <h1>Bonjour </h1>
+        <p>Posez votre question, on est là pour vous aider.</p>
+      </div>
+      <div class="chat-body">
+        <div class="msg msg-bot">Bonjour ! Comment puis-je vous aider aujourd'hui ?</div>
+        <div class="msg msg-user">J'aimerais en savoir plus sur vos tarifs.</div>
+        <div class="msg msg-bot">Bien sûr, je vous envoie le détail des formules juste en dessous.</div>
+      </div>
+      <div class="chat-input">
+        <div class="field">Écrivez votre message…</div>
+        <div class="send">➤</div>
+      </div>
+    </div>
+    <div class="toggle-row">
+      <div class="toggle">💬</div>
+    </div>
+  </div>
+
+</body>
+</html>
